@@ -1,0 +1,149 @@
+<?php
+
+/*
+ * tuitflow.com - 2013
+ * 
+ * Configuration file
+ * 
+ * 
+ */
+
+if(substr($_SERVER['REQUEST_URI'], 1,4)=='test'){
+	//DEVELOP CONFIG
+	//Twitter API DATA DEV
+	define('CONSUMER_KEY', '');
+	define('CONSUMER_SECRET', '');
+	//OWN DATA, to publish in tuitflow twitter
+	define('OWN_KEY','');
+	define('OWN_SECRET','');
+	define('OAUTH_CALLBACK', 'http://www.tuitflow.com/test/callback.php'); //Callback
+	define('TUITFLOW_URL','www.tuitflow.com/test/');
+	//
+	/* Database DEV */
+	define('DB_HOST','');
+	define('DB_USER','');
+	define('DB_PASS','');
+	define('DB_NAME','');
+	
+	//PAYPAL
+
+	//Desarrollo
+	
+	$url_pay="https://www.sandbox.paypal.com/cgi-bin/webscr";
+	$account_pay="";
+	
+	
+	
+	//Develop
+	define('environment','sandbox');
+	define('API_UserName','');
+	define('API_Password','');
+	define('API_Signature','');
+	//
+}else{
+	//PRO CONFIG
+	define('CONSUMER_KEY', '');
+	define('CONSUMER_SECRET', '');
+	        //OWN DATA, to publish in tuitflow twitter
+	/*
+	define('OWN_KEY','');
+	define('OWN_SECRET','');
+	*/
+	define('OWN_CONSUMER_KEY', '');
+	define('OWN_CONSUMER_SECRET', '');
+	define('OWN_KEY','');
+	define('OWN_SECRET','');
+	
+	define('OAUTH_CALLBACK', 'https://www.tuitflow.com/callback.php'); //Callback
+	//
+	/* Database PRO */
+	define('TUITFLOW_URL','www.tuitflow.com/');
+	define('DB_HOST','');
+	define('DB_USER','');
+	define('DB_PASS','');
+	define('DB_NAME','');
+	
+	/* Paypal */
+	$url_pay="https://www.paypal.com/cgi-bin/webscr";
+	$account_pay="";
+	
+	define('environment','live');
+	
+	define('API_UserName','');
+	define('API_Password','');
+	define('API_Signature','');
+	
+}
+
+
+
+
+
+
+
+//Pro
+
+ 
+define('PAYPAL_SECRET_HASH','');
+define('PAYPAL_FARE_PER','1.034');
+define('PAYPAL_FARE_FIX','0.35');//Fix
+/* Images */
+define('anonymous_profile_img','images/dollar_egg_peq.png');
+define('coin_icon','images/coin.png');
+/* Initial payment */
+define('MINIMUM_FOLLOWERS_TO_GET_INITIAL','15');
+define('START_ACCOUNT_BALANCE','1.00');
+
+
+//TODO redirect 'or die' to pig error page
+$conn = mysql_connect(DB_HOST, DB_USER, DB_PASS) or header('Location: oops.php'); 
+mysql_select_db(DB_NAME);
+
+
+
+//PAYPAL PAYMENT
+// eMail subject to receivers
+define('vEmailSubject','Tuitflow, Paypal payment');
+
+
+
+//
+/* Limits */
+define('PAYPAL_MIN_GET', '5.00');//Minimun amount to refund, in EUR
+
+/* Entropy control */
+define('MIN_ENTROPY_THRESHOLD','30');
+define('ENTROPY_TOO_LOW','30');
+define('ENTROPY_NORMAL','80');
+define('ENTROPY_MIN_SENDS','2');
+
+
+
+/* ads */
+define('BIG_AD_BANNER','
+<div style="width: 100%; text-align: center; margin-top:20px">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-xxxxxxxxxxxxxxx";
+/* tuitflow_main_big */
+google_ad_slot = "xxxxxxx";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>');
+
+define('SQUARE_AD_BANNER','<script type="text/javascript"><!--
+google_ad_client = "ca-pub-xxxxxxxxxxxxx";
+/* prueba_TF */
+google_ad_slot = "xxxxxxxx";
+google_ad_width = 200;
+google_ad_height = 200;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>');
+?>
