@@ -93,6 +93,7 @@ a:visited{
 	background-color:#fff;
 	margin-bottom:10px;
 	line-height: 22px;
+	overflow: hidden;
    	
 }
 .right_container{
@@ -220,7 +221,7 @@ a:visited{
 	         <?php print($content_boton); ?></div>
 	         </div>
 	          <div class="footer">
-	        tuitflow 2013 - <?php print($lang_license); ?> -  <a href="support.php" onclick="return !window.open(this.href, 'Support', 'width=500,height=500')"
+	        tuitflow 2013 - <a href="https://github.com/tuitflow/tuitflow-dev" target="blank"><?php print($lang_license); ?></a> -  <a href="support.php" onclick="return !window.open(this.href, 'Support', 'width=500,height=500')"
     target="_blank"><?php print($lang_support); ?></a> - <a href="how_it_works_<?php print($switch_lang); ?>.php" onclick="return !window.open(this.href, 'hiw', 'width=500,height=500')"
     target="_blank"><?php print($lang_about); ?></a> - <a href="tos.php" onclick="return !window.open(this.href, 'tos', 'width=500,height=500')"><?php print($lang_tos); ?></a>
 	    </div>     

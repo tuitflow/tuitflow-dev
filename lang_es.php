@@ -169,7 +169,7 @@ $lang_
 */
 $lang_your_balance_update='Enhorabuena! Tu balance ha sido actualizado!';
 $lang_your_balance_update_now='Enhorabuena! Tu balance acaba de ser actualizado!';
-
-
+$lang_error_user_dont_exists='¡Ups! El usuario no existe';
+$lang_to_user='al usuario:';
 
 ?>

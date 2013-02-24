@@ -307,6 +307,7 @@ a:visited{
   </script>
  <?php } ?> 
   <script type="text/javascript" src="widgets.js"></script>
+  
   <script>
   	function ChangeLanguaje(){
   		var change_info_d = document.getElementById('change_info');
@@ -329,7 +330,50 @@ a:visited{
   		jQuery('#send_money_button').vibrate();
   		
   	}
-  	
+  	/*
+  	 $(document).tooltip({
+		items:'#send_money_button_pre',
+		tooltipClass:'preview-tip',
+		position: { my: "left+5 top", at: "right center" },
+		content:function(callback) { //callback
+			$.get('select_user.php',{}, function(data) {
+				callback(data); //call the callback function to return the value
+			});
+		},
+	   });
+	   */
+function SendMoneyPre(){
+	  $.fn.growl = function(params) {
+    var $root = this;
+
+    // tooltip content and styling
+    var $content = $(
+        '<div style="float:right;height:10px;"><a style="line-height:10px;" class="font_followers" href="#" >x</a></div><a style="font-family: Pontano Sans;"><strong>' + params.title + '</strong></a>' +
+        '<br><a style="margin: 0; padding: 5px 0 5px 0;font-family: Pontano Sans; font-size: 12px;">' + params.text + '</a>');
+
+    // add 'Close' button functionality        
+    var $close = $($content[0]);
+    $close.click(function(e) {
+      $root.tooltip('close').tooltip('destroy');
+    });
+    // prevent standard tooltip from closing
+    $root.bind('focusout mouseleave', function(e) { e.preventDefault(); e.stopImmediatePropagation(); return false; });
+	
+    // build tooltip
+    $root.tooltip({
+        content: function() { return $content; },
+        items: $root.selector,
+        tooltipClass: 'growl ' + params.growlClass,
+        position: {
+          my: 'left top',
+          at: 'left top+10'
+        }
+    }).tooltip('open');
+};
+
+$('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method="POST" action="select_user.php"><input style="border: 1px #F0E6F0 solid;padding: 3px; " name="user_post" type="text" placeholder="@<?php print($lang_placeholder); ?>" /> <input type="submit" value="<?php print($lang_send_button); ?>"/></form>', growlClass: 'success' });
+
+}
   </script>
 </head>
 <body onload="javascript:vibrate();">
@@ -362,7 +406,10 @@ a:visited{
 						break;
 						case 'PAYPAL_REFUND_OK':
 							print("<div class='info_message'> ".$paypal_refund_ok."</div>");
-						break;			
+						break;	
+						case 'PAYPAL_REFUND_OK_MANUAL':
+							print("<div class='info_message'> ".$paypal_refund_ok_manual."</div>");
+						break;		
 						default:
 										
 						break;
@@ -375,6 +422,10 @@ a:visited{
 							print("<div class='err_message'>ERR_NO_SESSION</div>");
 						break;
 						
+						case 'ERR_USER_DONT_EXISTS':
+							print("<div class='err_message'>".$lang_error_user_dont_exists."</div>");
+						break;
+						
 						default:
 										
 						break;
@@ -384,7 +435,11 @@ a:visited{
 					<div class="wrapper_index">
 	        <div class="left_index">
 	            <?php
-	            print("<div class='box_title'><a style='font-size:18px;'><strong>".$user_prof[name]."'s tuitflow</strong></a></div>");
+	            print("<div class='box_title' style='display:inline'><a style='font-size:18px;'><strong>".$user_prof[name]."'s tuitflow</strong></a></div>");
+								print('<div style="display:inline-block;" id="root" style="width: 100%; height: 100%"></div>');
+				
+				print("<div style='display:inline-block; margin-bottom:20px; margin-left:20px;'><a style='cursor:pointer; ' onmouseover='javascript:SendMoneyPre();' class='font_followers'><img id='send_money_button_pre' border='0' src='".coin_icon."' /> </a><a onmouseover='javascript:SendMoneyPre();' style='color:#0000FF;cursor:pointer' class='font_followers'> ".$lang_send_money."</a></div><br>");
+				
 				print("<a><strong>".$lang_recent_act."</strong></a><br>");
 				$my_activity=$user_class->GetMyActivity($user_profile['id'], $user_prof[id]);
 				//var_dump($user_profile[id]);var_dump($user_prof[id]);
@@ -886,11 +941,11 @@ a:visited{
             	?>
             	
             </div>
-      	          <div class="footer">
-	        tuitflow 2013 - <?php print($lang_license); ?> -  <a href="support.php" onclick="return !window.open(this.href, 'Support', 'width=500,height=500')"
+      	        <div class="footer">
+	        tuitflow 2013 - <a href="https://github.com/tuitflow/tuitflow-dev" target="blank"><?php print($lang_license); ?></a> -  <a href="support.php" onclick="return !window.open(this.href, 'Support', 'width=500,height=500')"
     target="_blank"><?php print($lang_support); ?></a> - <a href="how_it_works_<?php print($switch_lang); ?>.php" onclick="return !window.open(this.href, 'hiw', 'width=500,height=500')"
     target="_blank"><?php print($lang_about); ?></a> - <a href="tos.php" onclick="return !window.open(this.href, 'tos', 'width=500,height=500')"><?php print($lang_tos); ?></a>
-	    </div> 
+	    </div>  
         </div>
     </div>
     <div class="left">

@@ -159,6 +159,7 @@ $lang_delete_acc_button='Get my money and delete my account';
 $lang_user_deleted='Your user has been deleted. You will receive your money in 24h in your Paypal account';
 $lang_your_balance_update='Gratz! Your balance has been updated!';
 $lang_your_balance_update_now='Gratz! Your balance has been now updated!';
-
+$lang_error_user_dont_exists='Oops! User dont exists!';
+$lang_to_user='to user:';
 
 ?>
