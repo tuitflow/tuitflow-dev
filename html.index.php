@@ -89,7 +89,7 @@ a:visited{
 	background-color:#fff;
 	margin-bottom:10px;
 	line-height: 22px;
-   	
+   	overflow: hidden;
 }
 .right_container{
 	
