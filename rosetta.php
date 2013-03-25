@@ -13,6 +13,7 @@ switch ($switch_lang) {
 	default;
 	case 'en':
 		include('lang_en.php');
+	$switch_lang='en';
 	break;
 }
 
