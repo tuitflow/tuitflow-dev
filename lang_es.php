@@ -98,11 +98,13 @@ $rand_keys = array_rand($input, 2);
 $lang_text_button_rnd=$input[$rand_keys[0]];
 
 
+
 //Main
 
 $lang_sendmoneyto='&iexcl;Envía dinero a tus twitteros favoritos!';
-$lang_main_description='¿Nunca has pensado que ese twittero merece un premio? Con tuitflow envía dinero de <u>forma segura</u> y <u>sin comisiones</u> a cualquier usuario de Twitter de cualquier parte del mundo.
-	         	<br><br>
+$lang_main_description1='¿Nunca has pensado que ese twittero merece un premio?';
+$lang_main_description='Con tuitflow envía dinero de <u>forma segura</u> y <u>sin comisiones</u> a cualquier usuario de Twitter de cualquier parte del mundo.
+	         	<br>
 	         	Es imposible hacerlo más facil, en 3 clicks el usuario que elijas recibirá el dinero instantaneamente.';
 $lang_logontext='Incia sesión con tu cuenta de Twitter para empezar:';
 $lang_enviado='Envíado/Recibido';
@@ -171,5 +173,11 @@ $lang_your_balance_update='Enhorabuena! Tu balance ha sido actualizado!';
 $lang_your_balance_update_now='Enhorabuena! Tu balance acaba de ser actualizado!';
 $lang_error_user_dont_exists='¡Ups! El usuario no existe';
 $lang_to_user='al usuario:';
-
+$lang_finder_title='Buscador de usuarios';
+$lang_finder_no_results='Ups! No se han encontrado usuarios. Cambia el nombre e intentalo de nuevo.';
+$lang_twitter_post='te ha enviado';
+$lang_main_secure1='Tu cuenta siempre estará segura';
+$lang_main_secure2='Nunca veremos tu clave de Twitter';
+$lang_main_secure3='No publicaremos Tweets en tu nombre';
+$lang_main_secure4='Jamás cederemos tus datos a nadie';
 ?>

@@ -383,7 +383,7 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
         <img onclick="document.location.href='index.php#settings';" style="cursor:pointer;height: 25px; width: auto; padding-top: 10px; float: right; margin-right: 10px;" src='<?php print $user_prof[profile_image_url_https]; ?>' />
         <form method="GET" action="finder.php" class="search_form">
         
-		<input type="text" style="border: 1px #F0E6F0 solid;padding: 3px; " name="find" placeholder="@<?php print($lang_placeholder); ?>"/>	
+		<input type="text" style="border: 1px #F0E6F0 solid;padding: 3px; " name="find" placeholder="@<?php print($lang_placeholder); ?>" value="<?php if($find_user){ print($find_user);} ?>"/>	
 		</form>
     </div>
     <div class="wrapright">
@@ -656,6 +656,7 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 					<?php
 					break;
 					case 'finder':
+						print("<div class='box_title' style='display:inline-block; margin-bottom:10px; '><a style='font-size:18px'><strong>".$lang_finder_title."</strong></a></div>");
 						foreach ($find as $user_object) {
 							$user_result=get_object_vars($user_object);
 							//print_r($user_result);
@@ -690,6 +691,9 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 							    </div>	       
 						    </div>
 							<?php
+						}
+						if($user_result['id']==''){
+							print("<div>".$lang_finder_no_results."</div>");
 						}
 						break;
 						

@@ -90,8 +90,9 @@ $lang_be_original='Be original!';
 //Main
 
 $lang_sendmoneyto='Send money to your favorite Twitter!';
-$lang_main_description='Ever thought that twitterer deserves an award? With tuitflow <u>you can send money safely</u> and <u>zero-commission</u> to any Twitter user anywhere in the world.
-<br> <br>
+$lang_main_description1='Ever thought that twitterer deserves an award? ';
+$lang_main_description='With tuitflow <u>you can send money safely</u> and <u>zero-commission</u> to any Twitter user anywhere in the world.
+<br>
 It is impossible to make it easier, in 3 clicks the user your choice will receive the money at the moment.';
 $lang_logontext='Log in with Twitter to start:';
 $lang_enviado='Sent:';
@@ -161,5 +162,11 @@ $lang_your_balance_update='Gratz! Your balance has been updated!';
 $lang_your_balance_update_now='Gratz! Your balance has been now updated!';
 $lang_error_user_dont_exists='Oops! User dont exists!';
 $lang_to_user='to user:';
-
+$lang_finder_title='User finder';
+$lang_finder_no_results='Ops! No users found, change the name searched and try it again.';
+$lang_twitter_post='has sent you';
+$lang_main_secure1='Your account will always be safe';
+$lang_main_secure2='We never see your twitter password.';
+$lang_main_secure3='We will not publish Tweets on your behalf';
+$lang_main_secure4='We never give your information to anyone';
 ?>
