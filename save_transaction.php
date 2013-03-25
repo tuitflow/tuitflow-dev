@@ -63,8 +63,10 @@ NULL ,  '".$user_logon_data['id']."',  '".$user_data['id']."', CURRENT_TIMESTAMP
 	
 	//notify to destination user
 	$link="https://".TUITFLOW_URL."redeem.php?id=".$trans_hash;
-	
-	$connection_own = new TwitterOAuth(OWN_CONSUMER_KEY, OWN_CONSUMER_SECRET, OWN_KEY, OWN_SECRET);
+	//Get random value from $notificator array
+	$k = array_rand($notificator);
+	$notificator_data = $notificator[$k];
+	$connection_own = new TwitterOAuth($notificator_data['consumer_key'], $notificator_data['consumer_secret'], $notificator_data['own_key'], $notificator_data['own_secret']);
 	if($anonymous==0){
 		//get $user_screen_name
 		$user_screen_name=$user_class->GetUSerScreenName($user_logon_data['id']);
