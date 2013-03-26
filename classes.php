@@ -27,6 +27,8 @@ class Users{
 			if($followers_count>=MINIMUM_FOLLOWERS_TO_GET_INITIAL){
 				$initial_payment=mysql_query("INSERT INTO  `paypal_payments` (`id` ,`hash` ,`amount` ,`currency` ,`user_id` ,`status` ,`date`)VALUES (NULL ,  'INITIAL_PAYMENT',  '".START_ACCOUNT_BALANCE."',  '".$currency."',  '".$login_user_id['id']."',  '1',CURRENT_TIMESTAMP);");
 				$account=mysql_query("INSERT INTO  `account_balance` (`id` ,`user_id` ,`balance` ,`last_transaction`)VALUES (NULL ,  '".$login_user_id['id']."',  '".START_ACCOUNT_BALANCE."', CURRENT_TIMESTAMP);");
+			}else{
+				$account=mysql_query("INSERT INTO  `account_balance` (`id` ,`user_id` ,`balance` ,`last_transaction`)VALUES (NULL ,  '".$login_user_id['id']."',  '', CURRENT_TIMESTAMP);");
 			}
 			return $login_user_id['id'];
 		}
