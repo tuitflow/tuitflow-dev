@@ -6,6 +6,7 @@
 $lang_placeholder='alguien';
 $paypal_ok='Tu pago por Paypal se ha procesado correctamente!';
 $paypal_refund_ok='Tu cobro por Paypal se ha procesado correctamente!';
+$paypal_refund_ok_manual='Tu cobro por Paypal se ha procesado correctamente!';
 $lang_recent_act='Actividad reciente:';
 $lang_receives='recibe de ti';
 $lang_sent='te envia';

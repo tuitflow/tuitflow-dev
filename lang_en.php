@@ -6,6 +6,7 @@
 $lang_placeholder='someone';
 $paypal_ok='Your Paypal pay has been saved correctly!';
 $paypal_refund_ok='Your Paypal refund has been processed ok!';
+$paypal_refund_ok_manual='Your Paypal refund has been processed ok!';
 $lang_recent_act='Recent activity:';
 $lang_receives='receives from you';
 $lang_sent='sent you';
