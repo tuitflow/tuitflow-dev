@@ -16,7 +16,7 @@ if(substr($_SERVER['REQUEST_URI'], 1,4)=='test'){
 	//OWN DATA, to publish in tuitflow twitter
 	define('OWN_KEY','');
 	define('OWN_SECRET','');
-	define('OAUTH_CALLBACK', 'http://www.tuitflow.com/test/callback.php'); //Callback
+	define('OAUTH_CALLBACK', 'http://'.$_SERVER['SERVER_NAME'].'/test/callback.php'); //Callback
 	define('TUITFLOW_URL','www.tuitflow.com/test/');
 	//
 	/* Database DEV */
@@ -54,7 +54,7 @@ if(substr($_SERVER['REQUEST_URI'], 1,4)=='test'){
 	define('OWN_KEY','');
 	define('OWN_SECRET','');
 	
-	define('OAUTH_CALLBACK', 'https://www.tuitflow.com/callback.php'); //Callback
+	define('OAUTH_CALLBACK', 'https://'.$_SERVER['SERVER_NAME'].'/callback.php'); //Callback
 	//
 	/* Database PRO */
 	define('TUITFLOW_URL','www.tuitflow.com/');
