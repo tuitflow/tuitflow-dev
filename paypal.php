@@ -27,7 +27,7 @@ switch ($_GET['action']) {
 	  $amount=round($_GET['amount_c']*PAYPAL_FARE_PER,2)+PAYPAL_FARE_FIX;
    	  $currency=$_GET['currency'];
 	  $to_user_id=$_GET['to_user_id'];
-	  $insert_paypal=mysql_query("INSERT INTO  `develop`.`paypal_payments` (`id` ,`hash` ,`amount` ,`user_id` ,`status` ,`date`,`currency`)VALUES (
+	  $insert_paypal=mysql_query("INSERT INTO  `paypal_payments` (`id` ,`hash` ,`amount` ,`user_id` ,`status` ,`date`,`currency`)VALUES (
 NULL ,  '".$hash."',  '".$amount_b."',  '".$_SESSION['user_profile']['id']."',  '0', CURRENT_TIMESTAMP,'".$currency."');");
       $p->add_field('business', $account_pay);
       $p->add_field('return', $this_script.'?action=success&secure='.$secure.'&hash='.$hash.'&to_user_id='.$to_user_id);

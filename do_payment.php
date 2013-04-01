@@ -51,9 +51,10 @@ $currency = urlencode($currency);       // or other currency ('GBP', 'EUR', 'JPY
 // Receivers
 // Use '0' for a single receiver. In order to add new ones: (0, 1, 2, 3...)
 // Here you can modify to obtain array data from database.
+$id_trans=substr(number_format(time() * rand(),0,'',''),0,10);
 $receivers = array(0 => array('receiverEmail' => $paypal_to,
          'amount' => $amount,
-         'uniqueID' => "id_001123", // 13 chars max
+         'uniqueID' => "id_".$id_trans, // 13 chars max
          'note' => "Tuitflow get my money")); // space again at beginning.
 $receiversLenght = count($receivers);
 
@@ -87,10 +88,10 @@ $httpParsedResponseAr = PPHttpPost('MassPay', $nvpStr);
 if("SUCCESS" == strtoupper($httpParsedResponseAr["ACK"]) || "SUCCESSWITHWARNING" == strtoupper($httpParsedResponseAr["ACK"]))
 {
  //Payment is ok, now record and substract the money
- $money_class->SubtractMoney($_SESSION['user_profile']['id'], $amount);
- $user_class->Record_user_log($_SESSION['user_profile']['id'], "Refund ".$amount." ".$currency." to paypal ".$paypal_to);
+ $money_class->SubtractMoney($_SESSION['user_profile']['id'], $amount_gross);
+ $user_class->Record_user_log($_SESSION['user_profile']['id'], "Refund ".$amount_gross." ".$currency." to paypal ".$paypal_to);
  $status='OK';
- $money_class->RecordPaypalRefund($_SESSION['user_profile']['id'], $amount, $currency, $status, $httpParsedResponseAr['CORRELATIONID']);
+ $money_class->RecordPaypalRefund($_SESSION['user_profile']['id'], $amount_gross, $currency, $status, $httpParsedResponseAr['CORRELATIONID']);
  //print($httpParsedResponseAr['ACK']."<br>");
  //print("ok ".$amount." ".$currency." ".$paypal_to);
  //exit('MassPay Completed Successfully: '.print_r($httpParsedResponseAr, true));
@@ -99,9 +100,17 @@ if("SUCCESS" == strtoupper($httpParsedResponseAr["ACK"]) || "SUCCESSWITHWARNING"
 else
 {
  $status='KO '.$httpParsedResponseAr['L_SHORTMESSAGE0'];
- $money_class->RecordPaypalRefund($_SESSION['user_profile']['id'], $amount, $currency, $status, $httpParsedResponseAr['ACK']['CORRELATIONID']);
+ $money_class->SubtractMoney($_SESSION['user_profile']['id'], $amount_gross);
+ $money_class->RecordPaypalRefund($_SESSION['user_profile']['id'], $amount_gross, $currency, $status, $httpParsedResponseAr['ACK']['CORRELATIONID']);
 	
  //exit('MassPay failed: ' . print_r($httpParsedResponseAr, true));
- print("ERR_PAYPAL_REFUND_CONTACT_SUPPORT");
+ //print("ERR_PAYPAL_REFUND_CONTACT_SUPPORT");
+ //If an error happens, send mail to info@tuitflow.com to make the payment.
+ $cabeceras = 'From: info@tuitflow.com' . "\r\n" .
+    'Reply-To: info@tuitflow.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+ $message='El usuario '.$_SESSION['user_profile']['id'].' ha solicitado que se envien a su cuenta de paypal: '.$paypal_to.' la cantidad de: '.$amount_gross.' '.$currency;
+ mail("info@tuitflow.com", "Solicitud de transferencia al usuario: ".$_SESSION['user_profile']['id'], $message,$cabeceras);
+ printf("<script>document.location.href='index.php?message=PAYPAL_REFUND_OK_MANUAL&hash=".$hash."'</script>;");
 }
 ?>

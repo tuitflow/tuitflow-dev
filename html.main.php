@@ -5,6 +5,7 @@ require_once('config.php');
 require_once('classes.php');
 $user_class=New Users();
 $money_class=New MoneyStuff();
+$content_boton = '<a href="./redirect.php"><img border="0" src="button_new_sh_'.$switch_lang.'.png" alt="Sign in with Twitter"/></a>';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -210,16 +211,29 @@ a:visited{
 	         
 	         ?>
 	         <h2>tuitflow</h2>
-	         <h3><?php print($lang_sendmoneyto);?> <img src="<?php print(coin_icon); ?>" /></h3>
-	         <div style="text-align: justify;">
+	         
+	         <h3 style="margin-bottom: 50px"><?php print($lang_sendmoneyto);?> <img src="<?php print(coin_icon); ?>" /></h3>
+	         <div style="text-align: left; float:left; margin-right: 20px;height: 75px;margin-top: 20px;"><img style="height: 40px;width: auto; " src="coins.png" border="0" /></div>
+	         <div style="text-align: justify;margin-top: 30px;">
+	         <h3><?php print($lang_main_description1); ?></h3>	
 	         <a><?php print($lang_main_description); ?>
 	         	</a>
 	         </div>
 	         <br>
-	         <div style="text-align: center; margin-top: 40px;">
-	         <?php print($lang_logontext); ?><br>
+	         
+	         <div style="text-align: right; float:left; margin-right: 20px;margin-top: 70px;height: 200px"><img style="height: 50px;width: auto;" src="main.png" border="0" /></div>
+	         <div style="text-align: justify;margin-top: 40px;margin-right: 20px; ">
+	         <h3><?php print($lang_main_secure1); ?></h3>
+	         <a>+ <?php print($lang_main_secure2); ?></a><br>
+	         <a>+ <?php print($lang_main_secure3); ?></a><br>
+	         <a>+ <?php print($lang_main_secure4); ?></a><br>
+	         </div>
+	         <br />
+	         <div style="text-align: center; margin-top: 30px;display: block;">
+	         <strong><?php print($lang_logontext); ?></strong><br>
 	         <?php print($content_boton); ?></div>
 	         </div>
+	        
 	          <div class="footer">
 	        tuitflow 2013 - <a href="https://github.com/tuitflow/tuitflow-dev" target="blank"><?php print($lang_license); ?></a> -  <a href="support.php" onclick="return !window.open(this.href, 'Support', 'width=500,height=500')"
     target="_blank"><?php print($lang_support); ?></a> - <a href="how_it_works_<?php print($switch_lang); ?>.php" onclick="return !window.open(this.href, 'hiw', 'width=500,height=500')"
@@ -242,6 +256,7 @@ a:visited{
 			}
 			//var_dump($tuits_arr);
 	        ?>
+	       
 	         </div>
 	         <div class="left_container">
 	        <?php
