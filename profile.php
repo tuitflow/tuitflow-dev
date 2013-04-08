@@ -6,6 +6,7 @@ require_once('classes.php');
 $user_class=New Users();
 $money_class=New MoneyStuff();
 $profile_id=intval($_GET['id']);
+$scree_name_profile=$_GET['screen_name'];
 $user_data=$_SESSION['user'][$profile_id];
 //var_dump($_SESSION['user'][$profile_id]);
 $content=$_SESSION['content'];
@@ -22,16 +23,31 @@ if($user_data==false){
 	$user_data['profile_image_url_https']=$user_data['profile_img'];
 	$user_data['friends_count']=$user_data['following_count'];
 	$user_data['id']=$user_data['twitter_id'];
-	if($user_data['id']==''){
+	if($user_data['id']=='' && $profile_id){
 		//Twitter Query
-		
-		
 		$find = $connection->get('users/lookup', array('user_id' => $profile_id));	
 		//var_dump($find);
-		$user_data=get_object_vars($find[0]);
-		//var_dump($user_data);
+		foreach ($find as $user_data_p) {
+				$user_data=get_object_vars($user_data_p);
+				if($user_data['id']==''){
+					printf("<script>document.location.href='index.php?error=ERR_USER_DONT_EXISTS'</script>;");
+					die('ERR_USER_DONT_EXISTS'); //TODO HANDLE ERR
+				}
+		}
 		
 	}
+}
+if($scree_name_profile!=''){
+	//Twitter Query
+		$find = $connection->get('users/lookup', array('screen_name' => $scree_name_profile));	
+		//var_dump($find);
+		foreach ($find as $user_data_p) {
+				$user_data=get_object_vars($user_data_p);
+				if($user_data['id']==''){
+					printf("<script>document.location.href='index.php?error=ERR_USER_DONT_EXISTS'</script>;");
+					die('ERR_USER_DONT_EXISTS'); 
+				}
+		}
 }
 $user_profile=$_SESSION['user_profile'];
 //var_dump($user_data);
