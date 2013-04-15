@@ -963,7 +963,11 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 					case 'sum_balance';
 					case 'finder';
 					case 'index':
-						print("<div style='display:inline;'><strong>".$user_prof[name]." @".$user_prof[screen_name]."</strong></div> <br>");
+						$showed_name="".$user_prof[name]." @".$user_prof[screen_name]."";
+						if(strlen($showed_name)>30){
+							$showed_name=substr($showed_name, 0,30)."...";
+						}
+						print("<div style='display:inline;'><strong>".$showed_name."</strong></div> <br>");
 						print("<img src='".$user_prof[profile_image_url_https]."' /> <div style='display:inline;margin-left:5px;'><a href='https://twitter.com/intent/tweet?text=".$lang_text_button_rnd."' class='twitter-hashtag-button' data-lang='".$user_profile['languaje']."' data-via='tuitflow'>Tweet</a> <a class='font_followers' style='margin-left:-25px'>(".$lang_be_original.")</a></div><br>");
 						print(ucwords($lang_followers).": ".$user_prof[followers_count]."<br>");
 						print(ucwords($lang_following).": ".$user_prof[friends_count]."<br>");
