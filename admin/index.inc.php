@@ -25,9 +25,18 @@ $teorico_paypal=$ver_pasta['sum(amount)']-$ver_pastab['sum(amount)'];
 print("Total fondos teoricos en paypal: ".$teorico_paypal."<br>");
 
 
+
 $ver_usuarios=mysql_query("SELECT sum(balance) FROM account_balance;");
 $ver_pastab=mysql_fetch_array($ver_usuarios);
 print("Total en cuentas de usuarios: ".$ver_pastab['sum(balance)']."<br>");
+
+
+
+$deuda_tf=$ver_pastab['sum(balance)']-$teorico_paypal;
+print("Deuda tuitflow: ".$deuda_tf."<br>");
+
+
+
 $percent_core=round(($teorico_paypal/$ver_pastab['sum(balance)'])*100,2);
 print("Core capital: ".$percent_core."%<br>");
 

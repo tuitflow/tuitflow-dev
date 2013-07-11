@@ -2,7 +2,7 @@ Terminos y condiciones de tuitflow.com<br><br>
 
 1) Información general<br><br>
 
-Estas condiciones de uso regulan el uso de tuitflow.com (en adelante tuitflow) de la que es titular tuitflow.com (Apartado de Correos 93, La Felguera, Asturias 33929 España)
+Estas condiciones de uso regulan el uso de tuitflow.com (en adelante tuitflow) de la que es titular tuitflow.com (Apartado de Correos 93, La Felguera, Asturias 33929 España), de la que es responsable Ruben García García CIF: 71636741K, (Calle Tenerife 29, 19208, Alovera, Guadalajara)
 <br><br>
 Contacto: info@tuitflow.com
 <br><br><br>

@@ -210,9 +210,8 @@ a:visited{
 					}
 	         
 	         ?>
-	         <h2>tuitflow</h2>
-	         
-	         <h3 style="margin-bottom: 50px"><?php print($lang_sendmoneyto);?> <img src="<?php print(coin_icon); ?>" /></h3>
+	         <h2>tuitflow - <?php print($lang_sendmoneyto);?></h2>
+	         <div style="margin-bottom: 50px"><a ><?php print($lang_sendmoneytosub);?> <img src="<?php print(coin_icon); ?>" /></a></div>
 	         <div style="text-align: left; float:left; margin-right: 20px;height: 75px;margin-top: 20px;"><img style="height: 40px;width: auto; " src="coins.png" border="0" /></div>
 	         <div style="text-align: justify;margin-top: 30px;">
 	         <h3><?php print($lang_main_description1); ?></h3>	

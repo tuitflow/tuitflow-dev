@@ -102,7 +102,8 @@ $lang_text_button_rnd=$input[$rand_keys[0]];
 
 //Main
 
-$lang_sendmoneyto='&iexcl;Envía dinero a tus twitteros favoritos!';
+$lang_sendmoneyto='&iexcl;Envía dinero a través de Twitter!';
+$lang_sendmoneytosub='Crea campañas de micro crowdfunding y difúndelas por la red, pide o presta dinero a tus amigos';
 $lang_main_description1='¿Nunca has pensado que ese twittero merece un premio?';
 $lang_main_description='Con tuitflow envía dinero de <u>forma segura</u> y <u>sin comisiones</u> a cualquier usuario de Twitter de cualquier parte del mundo.
 	         	<br>
@@ -181,4 +182,37 @@ $lang_main_secure1='Tu cuenta siempre estará segura';
 $lang_main_secure2='Nunca veremos tu clave de Twitter';
 $lang_main_secure3='No publicaremos Tweets en tu nombre';
 $lang_main_secure4='Jamás cederemos tus datos a nadie';
+
+$lang_campaign_create='Nueva campaña de crowdfunding';
+$lang_create_campaign='Crea una nueva campaña de crowdfunding';
+$lang_days='dias';
+$lang_minutes='minutos';
+$lang_hours='horas';
+$lang_raised='recaudado';
+$lang_of='de';
+$lang_remains='faltan';
+$lang_donate_to='Donar a esta campaña';
+$lang_campaign_off='La campaña ha finalizado. Gracias :)';
+$lang_your_campaign='Datos de tu campaña';
+$lang_raised_funds='Dinero recaudado:';
+$lang_tuitflow_fare='Comisión Tuitflow:';
+$lang_total_cam='Total que cobrarás:';
+$lang_edit_campaign='editar campaña';
+$lang_end_campaign='terminar campaña';
+$lang_campaign_name='Nombre de la campaña:';
+$lang_campaign_desc='Descripción:';
+$lang_camp_need='Cuanto dinero necesitas: (en';
+$lang_max_money='Maximo dinero que quieres recaudar (Si escribes una cantidad, cuando la alcances, la campaña finalizará):';
+$lang_campaign_image='Imagen de tu campaña (opcional):';
+$lang_utube_video='Video de Youtube (opcional):';
+$lang_campaign_type='Tipo de campaña:';
+$lang_camp_typeone='1 semana (1% de comisión sobre lo que recaudes)';
+$lang_camp_typetwo='2 semanas (5% de comisión sobre lo que recaudes)';
+$lang_my_campaigns='Mis campañas de crowdfunding:';
+$lang_user_campaigns='Campañas de crowdfunding:';
+$lang_raised_funds_main='dinero recaudado';
+$lang_campaign_name_main='nombre de la campaña';
+$lang_difuse='¡Difunde esta campaña!';
+$lang_helpme='Haz una donación a ';
+$lang_ultimas='Ultimas campañas de crowdfunding';
 ?>

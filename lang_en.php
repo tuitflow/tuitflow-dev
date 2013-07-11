@@ -77,7 +77,7 @@ $lang_license='Under GPLv3 License';
 
 $lang_money_rec='Money received';
 $lang_money_sent='Money sent';
-$lang_acc_bal='Account balance';
+$lang_acc_bal='Balance';
 $lang_add_money='Add money to account';
 $lang_refund='Refund';
 $lang_your_followers='Your followers top';
@@ -90,7 +90,8 @@ $lang_curr_changed='Currency changed!';
 $lang_be_original='Be original!';
 //Main
 
-$lang_sendmoneyto='Send money to your favorite Twitter!';
+$lang_sendmoneyto='Send money through Twitter!';
+$lang_sendmoneytosub='Create crowdfunding micro campaigns, spread it on social networks, request or lend money to your friends';
 $lang_main_description1='Ever thought that twitterer deserves an award? ';
 $lang_main_description='With tuitflow <u>you can send money safely</u> and <u>zero-commission</u> to any Twitter user anywhere in the world.
 <br>
@@ -170,4 +171,39 @@ $lang_main_secure1='Your account will always be safe';
 $lang_main_secure2='We never see your twitter password.';
 $lang_main_secure3='We will not publish Tweets on your behalf';
 $lang_main_secure4='We never give your information to anyone';
+
+
+$lang_campaign_create='New crowdfunding campaign';
+$lang_create_campaign='Create a crowdfunding campaign';
+$lang_days='days';
+$lang_minutes='minutes';
+$lang_hours='hours';
+$lang_raised='raised';
+$lang_of='of';
+$lang_remains='remains';
+$lang_donate_to='Donate to this campaign';
+$lang_campaign_off='Campaign ends, Thank you :)';
+$lang_your_campaign='Your campaign data';
+$lang_raised_funds='Raised Money:';
+$lang_tuitflow_fare='Tuitflow fare:';
+$lang_total_cam='Total you will receive:';
+$lang_edit_campaign='edit campaign';
+$lang_end_campaign='terminate campaign';
+$lang_campaign_name='Campaign name:';
+$lang_campaign_desc='Description:';
+$lang_camp_need='How much money do you need: (in';
+$lang_max_money='Maximum money you want to raise (If you type a number, when reached, the campaign will end):';
+$lang_campaign_image='Campaign image (recommended):';
+$lang_utube_video='Youtube video (recommended):';
+$lang_campaign_type='Campaign type:';
+$lang_camp_typeone='1 week (1% fee)';
+$lang_camp_typetwo='2 week (5% fee)';
+$lang_my_campaigns='My crowdfunding campaigns:';
+$lang_user_campaigns='Crowdfunding campaigns:';
+$lang_raised_funds_main='money raised';
+$lang_campaign_name_main='campaign name';
+$lang_difuse='Spread this campaign!';
+$lang_helpme='Make a donation to ';
+$lang_ultimas='Last crowdfunding campaigns';
+
 ?>

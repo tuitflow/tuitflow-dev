@@ -293,6 +293,10 @@ class MoneyStuff{
 		$button="<a class='font_followers' href='send_money.php?from_user_id=".$from_user_id."&to_user_id=".$to_user_id."'><img id='send_money_button' border='0' src='".coin_icon."' /> </a>";
 		return $button;
 	}
+		function GenerateCreateCampaignButton($user_id){
+		$button="<a class='font_followers' href='create_campaign.php?user_id=".$user_id."'><img id='coins' border='0' style='width:auto;height:24px' src='".moneditas_icon."' /> </a>";
+		return $button;
+	}
 	
 	function SubtractMoney($user_id,$amount){
 		$insert_query=mysql_query("UPDATE `account_balance` SET `balance` = (SELECT `balance` - '".$amount."' FROM (SELECT `balance` FROM `account_balance` WHERE `user_id` = '".$user_id."') as x) WHERE `user_id` = '".$user_id."';");
@@ -441,6 +445,139 @@ class MoneyStuff{
 			$this->RedeemTransaction($pending['hash']);
 		}
 		return true;
+	}
+
+	function SaveNewCampaign($user_id,$name,$desc,$needed_money,$max_money,$currency,$image_url,$video_url,$campaign_type,$friendly_url){
+		$insertar=mysql_query("INSERT INTO  `campaigns` (`id` ,`user_id` ,`name` ,`description` ,`needed_money` ,`max_money` ,`currency` ,`image_url` ,`video_url` ,`campaign_type` ,`created_at` ,`enabled` , `friendly_url`)VALUES (NULL ,  '".$user_id."',  '".$name."',  '".$desc."',  '".$needed_money."',  '".$max_money."',  '".$currency."',  '".$image_url."',  '".$video_url."',  '".$campaign_type."', CURRENT_TIMESTAMP ,  '1','".$friendly_url."');		");
+		 if (!$insertar) {
+				return false;
+    			die('Invalid query: ' . mysql_error());
+			}else{
+				$ver_insert=mysql_query("SELECT id FROM campaigns WHERE `user_id` = '".$user_id."' ORDER BY id DESC LIMIT 1;");
+				$id_camp=mysql_fetch_array($ver_insert);
+				return $id_camp['id'];
+			}
+	}
+	
+	function GetCampaignData($campaign_id){
+		$ver_campaign=mysql_query("SELECT user_id, name, description, needed_money, max_money, currency, image_url, video_url , campaign_type, created_at, enabled, friendly_url FROM campaigns WHERE id = '".$campaign_id."'");
+		$campaign=mysql_fetch_array($ver_campaign);
+		return $campaign;
+	}
+	
+	function GetCampaignIdFromFriendly($campaign_name){
+		$ver_campaign=mysql_query("SELECT id FROM campaigns WHERE friendly_url = '".$campaign_name."'");
+		$campaign=mysql_fetch_array($ver_campaign);
+		return $campaign;
+	}
+	function GetCampaignOwner($campaign_id){
+		$ver_campaign=mysql_query("SELECT user_id FROM campaigns WHERE id = '".$campaign_id."'");
+		$campaign=mysql_fetch_array($ver_campaign);
+		return $campaign;
+	}
+	
+	function GetCampaignAmountReceived($campaign_id){
+		$ver_campaign=mysql_query("SELECT sum(amount) FROM campaign_transactions WHERE campaign_id = '".$campaign_id."'");
+		$campaign=mysql_fetch_array($ver_campaign);
+		return $campaign;
+	}
+	
+	function IsCampaingActive($campaign_id,$created_at,$campaign_type){
+		$remainingtime=array();
+		//Check if campaign must be active and if true, returns remaining time
+		if($campaign_type=='oneweek'){
+			$durationdays=7;
+		}
+		if($campaign_type=='twoweeks'){
+			$durationdays=14;
+		}
+		$timestamp = strtotime($created_at);
+		$now=time();
+		if($timestamp+($durationdays*24*60*60)<$now){
+			//campaign expired
+			$remtime=false;
+		}else{
+			//campaign on time
+			$remainingtime=($timestamp+($durationdays*24*60*60))-$now;
+			if($remainingtime>86400){
+				//is greater than day
+				$remtime['value']=ceil($remainingtime/60/60/24);
+				$remtime['scale']='days';
+			}else{
+				if($remainingtime>3600){
+				//only hours
+				$remtime['value']=ceil($remainingtime/60/60);
+				$remtime['scale']='hours';
+				}else{
+					//minutes
+					$remtime['value']=ceil($remainingtime/60);
+					$remtime['scale']='minutes';
+				}
+			}
+		}
+		
+		return $remtime;
+		
+	}
+	
+		function GetMyCampaigns($user_id){
+		$get_mov=mysql_query("SELECT id,user_id, name, description, needed_money, max_money, currency, image_url, video_url , campaign_type, created_at, enabled, friendly_url FROM campaigns WHERE user_id = '".$user_id."' ORDER BY created_at DESC LIMIT 100;");
+		$i=0;
+		while($movements=mysql_fetch_array($get_mov)){
+			$movement[$i]=$movements;
+			$i++;
+		}
+		return $movement;
+		}
+		function GetLastCampaigns(){
+			$get_mov=mysql_query("SELECT id,user_id, name, description, needed_money, max_money, currency, image_url, video_url , campaign_type, created_at, enabled, friendly_url FROM campaigns ORDER BY created_at DESC LIMIT 5;");
+			$i=0;
+			while($movements=mysql_fetch_array($get_mov)){
+				$movement[$i]=$movements;
+				$i++;
+			}
+		return $movement;
+		}
+		
+		
+		
+}
+
+class FunctionsAndVarious{
+		function UploadImage($image){
+		$allowedExts = array("gif", "jpeg", "jpg", "png");
+		$extension = end(explode(".", $image["name"]));
+		if ((($image["type"] == "image/gif")
+		|| ($image["type"] == "image/jpeg")
+		|| ($image["type"] == "image/jpg")
+		|| ($image["type"] == "image/pjpeg")
+		|| ($image["type"] == "image/x-png")
+		|| ($image["type"] == "image/png"))
+		&& ($image["size"] < MAX_UPLOAD_SIZE)
+		&& in_array($extension, $allowedExts))
+		  {
+		  if ($image["error"] > 0)
+		    {
+		    return false;
+		    } else {
+			$final_name=$this->GetRandomChars(10).$image["name"];
+		    move_uploaded_file($image["tmp_name"], UPLOAD_PATH . $final_name);
+		    return $final_name; 
+		    }
+		  }
+		else
+		  {
+		 return false;
+		  }
+	}
+	
+	function GetRandomChars($len){
+		$seed = str_split('abcdefghijklmnopqrstuvwxyz'
+                 .'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+                 .'0123456789!@#$%^&*()'); // and any other characters
+		shuffle($seed); // probably optional since array_is randomized; this may be redundant
+		$rand = implode('', array_rand($seed, $len));
+		return $rand;
 	}
 }
 ?>

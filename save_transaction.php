@@ -71,7 +71,7 @@ NULL ,  '".$user_logon_data['id']."',  '".$user_data['id']."', CURRENT_TIMESTAMP
 		//get $user_screen_name
 		$user_screen_name=$user_class->GetUSerScreenName($user_logon_data['id']);
 		$currency=$user_logon_data['currency'];
-		$status="@".$user_data['screen_name'].", @".$user_screen_name." te ha regalado ".$amount.' '.$currency.'. '.$link;
+		$status="@".$user_data['screen_name'].", @".$user_screen_name." ".$lang_twitter_post." ".$amount.' '.$currency.'. '.$link;
 	}else{
 		$status="@".$user_data['screen_name'].", alguien te ha regalado ".$amount.' '.$currency.'. '.$link;
 	}

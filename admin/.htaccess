@@ -1,0 +1,4 @@
+AuthUserFile /var/www/html/test/admin/.htpass
+AuthName "Please Log In"
+AuthType Basic
+require valid-user

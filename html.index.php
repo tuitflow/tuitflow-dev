@@ -148,6 +148,12 @@ a:visited{
 	text-decoration:none;
 	
 }
+.font_actv{
+	font-size: 11px;
+	color: #333;
+	text-decoration:none;
+	
+}
 /*
  * 
  */
@@ -190,14 +196,15 @@ a:visited{
    position: relative;
    float: left;
    left: 0.00%;
-   width: 70.00%;
+   width: 75.00%;
    
 }
 .right_index{
    position: relative;
    float: right;
    right: 0.00%;
-   width: 30.00%;
+   width: 24.00%;
+   
    
 }
 .mydiv {width:400px; height: 75px;margin-bottom: 10px;}
@@ -240,19 +247,178 @@ a:visited{
 }
 .box_title {
 	
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #F0E6F0), color-stop(1, #F0E6F0) );
+	/*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #F0E6F0), color-stop(1, #F0E6F0) );
 	background:-moz-linear-gradient( center top, #F0E6F0 5%, #F0E6F0 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0E6F0', endColorstr='#F0E6F0');
-	background-color:#F0E6F0; color:#292929; 
-	border-left:1px solid #F0E6F0;
+	background-color:#F0E6F0; color:#292929; */
+background: rgba(102,0,102,0.67);
+background: -moz-linear-gradient(top, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(102,0,102,0.67)), color-stop(0%, rgba(240,230,240,0.67)), color-stop(100%, rgba(240,230,240,1)));
+background: -webkit-linear-gradient(top, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+background: -o-linear-gradient(top, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+background: -ms-linear-gradient(top, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+background: linear-gradient(to bottom, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660066', endColorstr='#f0e6f0', GradientType=0 );
+	/*border-left:1px solid #F0E6F0;*/
 	padding-top:7px;
 	padding-bottom:7px;
 	padding-left:7px;
 	padding-right: 7px;
 	margin-bottom:10px;
 	display:table;
-	border: 1px solid #CCCCCC; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; 
-	}
+	border: 5px solid #ffffff; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; 
+}
+.box_activity {
+	
+	/*background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #F0E6F0), color-stop(1, #F0E6F0) );
+	background:-moz-linear-gradient( center top, #F0E6F0 5%, #F0E6F0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0E6F0', endColorstr='#F0E6F0');
+	background-color:#F0E6F0; color:#292929; */
+background: rgba(102,0,102,0.67);
+background: -moz-linear-gradient(top, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(102,0,102,0.67)), color-stop(0%, rgba(240,230,240,0.67)), color-stop(100%, rgba(240,230,240,1)));
+background: -webkit-linear-gradient(top, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+background: -o-linear-gradient(top, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+background: -ms-linear-gradient(top, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+background: linear-gradient(to bottom, rgba(102,0,102,0.67) 0%, rgba(240,230,240,0.67) 0%, rgba(240,230,240,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660066', endColorstr='#f0e6f0', GradientType=0 );
+	/*border-left:1px solid #F0E6F0;*/
+	padding-top:7px;
+	padding-bottom:7px;
+	padding-left:7px;
+	padding-right: 7px;
+	margin-bottom:5px;
+	display:table;
+	border: 5px solid #ffffff; /* -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;*/ 
+	width: 210px;
+}
+.box_campaign {
+	
+	/* background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #F0E6F0), color-stop(1, #F0E6F0) ); 
+	background:-moz-linear-gradient( center top, #F0E6F0 5%, #F0E6F0 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0E6F0', endColorstr='#F0E6F0');
+	background-color:#F0E6F0; color:#292929; 
+	*/
+	background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
+background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	border-left:1px solid #F0E6F0;
+	padding-top:7px;
+	padding-bottom:7px;
+	padding-left:7px;
+	padding-right: 7px;
+	margin-bottom:10px;
+	margin-right:7px;
+	margin-left:7px;
+	width:150px;
+	display:inline-table;
+	border: 1px solid #eeeeee; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; 
+}
+	.camapign_input {
+   
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    text-shadow: 1px 1px 0px #fff;
+    display: block;
+    margin: 10px -2px 10px 0;
+   
+    
+    padding: 4px 4px;
+    height: 26px;
+    cursor: pointer;
+    
+    background: #FBFBFB; /* old browsers */
+    background: -moz-linear-gradient(top, #FBFBFB 0%, #EEEEEE 99%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FBFBFB), color-stop(99%, #EEEEEE)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#FBFBFB', endColorstr = '#EEEEEE', GradientType = 0); /* ie */
+    border: 1px solid #cfcfcf;
+    
+    color: #666;
+}
+		.meter { 
+	height: 10px;  /* Can be anything */
+	position: relative;
+	background: #eee;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 5px;
+	-webkit-box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+	-moz-box-shadow   : inset 0 -1px 1px rgba(255,255,255,0.3);
+	box-shadow        : inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+.meter > span {
+	display: block;
+	height: 100%;
+	   -webkit-border-top-right-radius: 20px;
+	-webkit-border-bottom-right-radius: 20px;
+	       -moz-border-radius-topright: 20px;
+	    -moz-border-radius-bottomright: 20px;
+	           border-top-right-radius: 20px;
+	        border-bottom-right-radius: 20px;
+	    -webkit-border-top-left-radius: 20px;
+	 -webkit-border-bottom-left-radius: 20px;
+	        -moz-border-radius-topleft: 20px;
+	     -moz-border-radius-bottomleft: 20px;
+	            border-top-left-radius: 20px;
+	         border-bottom-left-radius: 20px;
+	background-color: rgb(43,194,83);
+	background-image: -webkit-gradient(
+	  linear,
+	  left bottom,
+	  left top,
+	  color-stop(0, rgb(43,194,83)),
+	  color-stop(1, rgb(84,240,84))
+	 );
+	background-image: -webkit-linear-gradient(
+	  center bottom,
+	  rgb(43,194,83) 37%,
+	  rgb(84,240,84) 69%
+	 );
+	background-image: -moz-linear-gradient(
+	  center bottom,
+	  rgb(43,194,83) 37%,
+	  rgb(84,240,84) 69%
+	 );
+	background-image: -ms-linear-gradient(
+	  center bottom,
+	  rgb(43,194,83) 37%,
+	  rgb(84,240,84) 69%
+	 );
+	background-image: -o-linear-gradient(
+	  center bottom,
+	  rgb(43,194,83) 37%,
+	  rgb(84,240,84) 69%
+	 );
+	/* -webkit-box-shadow: 
+	  inset 0 2px 9px  rgba(255,255,255,0.3),
+	  inset 0 -2px 6px rgba(0,0,0,0.4);
+	-moz-box-shadow: 
+	  inset 0 2px 9px  rgba(255,255,255,0.3),
+	  inset 0 -2px 6px rgba(0,0,0,0.4);
+	  
+	  */
+	position: relative;
+	overflow: hidden;
+}
+	.orange > span {
+	background-color: #f1a165;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #f1a165),color-stop(1, #f36d0a));
+	background-image: -webkit-linear-gradient(top, #f1a165, #f36d0a); 
+        background-image: -moz-linear-gradient(top, #f1a165, #f36d0a);
+        background-image: -ms-linear-gradient(top, #f1a165, #f36d0a);
+        background-image: -o-linear-gradient(top, #f1a165, #f36d0a);
+}
+					
 </style>
 
  <link rel="stylesheet" href="jquery/jquery-ui.css" />
@@ -434,13 +600,47 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 					?>
 					<div class="wrapper_index">
 	        <div class="left_index">
+	        	<?php
+	        	
+	            print("<div class='box_title' style='display:inline'><a style='font-size:18px;'><strong>".$lang_ultimas."</strong></a></div>");
+	            print('<div style="display:inline-block;" id="root" style="width: 100%; height: 100%"></div>');
+	            print("<div style='display:inline-block; margin-bottom:20px; margin-left:20px;'><a style='cursor:pointer; ' onmouseover='javascript:SendMoneyPre();' class='font_followers'><img id='send_money_button_pre' border='0' src='".coin_icon."' /> </a><a onmouseover='javascript:SendMoneyPre();' style='color:#0000FF;cursor:pointer' class='font_followers'> ".$lang_send_money."</a></div> <div style='display:inline-block; margin-bottom:20px; margin-left:20px;'> ".$money_class->GenerateCreateCampaignButton($_SESSION['user_profile']['id'])."<a style='color:#0000FF;cursor:pointer' class='font_followers' href='create_campaign.php?user_id=".$_SESSION['user_profile']['id']."'>".$lang_campaign_create."</a></div><br>");
+				
+				//print('<div style="margin-top:10px;margin-bottom:10px;"><br></div>');	
+				$campaigns=$money_class->GetLastCampaigns();
+				foreach ($campaigns as $campaign) {
+					$title_pet=substr($campaign['name'], 0,20)."...";
+					$desc_pet=substr($campaign['description'], 0,50)."...";
+					print('<div class="box_campaign">
+					<strong><a href="campaign.php?id='.$campaign['id'].'" style="color:#000000">'.$title_pet.'</a></strong><br>
+					<a>'.$desc_pet.'</a><br>');
+					if($campaign['image_url']!=''){
+					print('<img src='.$campaign['image_url'].' border=0 style="width:150px;height:auto;"/><br>');
+					}
+					$amount_received=$money_class->GetCampaignAmountReceived($campaign['id']);
+					$amount_received=$amount_received['sum(amount)'];
+						if($amount_received==NULL){
+							$amount_received='0';
+						}
+					$percent=round(($amount_received/$campaign['needed_money'])*100,1);
+					
+					print('<strong>'.$percent.'% '.$lang_raised.'</strong><br>
+					<div class="meter orange" style="width: 140px;">
+						<span style="width: '.$percent.'%"></span>
+						</div>
+					</div>');		
+							
+					
+				}		
+					print('<div style="height:10px;"> </div>');				
+				?>
 	            <?php
 	            print("<div class='box_title' style='display:inline'><a style='font-size:18px;'><strong>".$user_prof[name]."'s tuitflow</strong></a></div>");
-								print('<div style="display:inline-block;" id="root" style="width: 100%; height: 100%"></div>');
+								
 				
-				print("<div style='display:inline-block; margin-bottom:20px; margin-left:20px;'><a style='cursor:pointer; ' onmouseover='javascript:SendMoneyPre();' class='font_followers'><img id='send_money_button_pre' border='0' src='".coin_icon."' /> </a><a onmouseover='javascript:SendMoneyPre();' style='color:#0000FF;cursor:pointer' class='font_followers'> ".$lang_send_money."</a></div><br>");
 				
-				print("<a><strong>".$lang_recent_act."</strong></a><br>");
+				
+				print("<br><br><a><strong>".$lang_recent_act."</strong></a><br>");
 				$my_activity=$user_class->GetMyActivity($user_profile['id'], $user_prof[id]);
 				//var_dump($user_profile[id]);var_dump($user_prof[id]);
 				
@@ -473,8 +673,62 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 			}else{
 				print($lang_no_activity."<br><br>");
 				
-			}
-				print("<a><strong>".$lang_last_funds."</strong></a><br>");
+			}	
+			
+				//My campaigns
+				
+				//Check if user has campaigns
+				$move=$money_class->GetMyCampaigns($user_profile['id']);
+				
+				if($move!=false){
+				print("<a><strong>".$lang_my_campaigns."</strong></a><br>");
+				?>
+				
+				
+				<div class="datagrid"><table>
+<thead><tr><th><?php print($lang_campaign_name_main); ?></th><th><?php print($lang_raised_funds_main); ?></th><th><?php print($lang_date); ?></th></tr></thead>
+<tbody>
+<?php
+				
+				//print_r($move);
+				if($move!=''){
+					$a=0;//for pair class style
+					
+
+					foreach ($move as $movement) {
+						if($a % 2==0){
+							//pair
+							$table_class="class='no_alt'";
+						}else{
+							$table_class="class='alt'";
+						}
+						if(strlen($movement['name'])>30){
+							$camp_name=substr($movement['name'], 0,30);
+						}else{
+							$camp_name=$movement['name'];
+						}
+						$raised_amount=$money_class->GetCampaignAmountReceived($movement['id']);
+						$total_amount=$raised_amount['sum(amount)'];
+						if($total_amount==NULL){
+							$total_amount=0;
+						}
+						$amount_funded=$total_amount.'/'.$movement['needed_money'];
+						
+						//Know if is paypal refill or user gift
+						//print("<tr ".$table_class."><td><a href='campaign.php?name=".$movement['friendly_url']."'>".$camp_name."</a></td><td>".$amount_funded." ".$user_class->GetUSerCurrency($user_profile['id'])."</td><td>".$movement['created_at']."</td></tr>");
+						print("<tr ".$table_class."><td><a href='campaign.php?id=".$movement['id']."'>".$camp_name."</a></td><td>".$amount_funded." ".$user_class->GetUSerCurrency($user_profile['id'])."</td><td>".$movement['created_at']."</td></tr>");
+						
+						
+					$a++;		
+					}
+					
+				}
+?>
+</tbody>
+</table>
+</div>
+<br><br>		<?php } //End campaigns ?>	
+				<?php print("<a><strong>".$lang_last_funds."</strong></a><br>");
 				?>
 				<div class="datagrid"><table>
 <thead><tr><th><?php print($lang_date); ?></th><th><?php print($lang_source); ?></th><th><?php print($lang_amount); ?></th><th><?php print($lang_currency); ?></th></tr></thead>
@@ -580,25 +834,32 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 	        </div>
 	        <div class="right_index">
 	            <?php
-	            print("<div style='float:right; margin-bottom:10px; height:30px;'><a href='?tab=highlights'>".$lang_highlights."</a> <a href='?tab=friends'>".$lang_friends."</a> <a href='?tab=all'>".$lang_all."</a></div>");
+	            print("<div style='float:right; margin-bottom:10px; height:30px;'><a class='font_followers' style='color:#0000FF;cursor:pointer;margin-left:5px;' href='?tab=highlights'>".$lang_highlights."</a> <a style='color:#0000FF;cursor:pointer;margin-left:5px;' class='font_followers' href='?tab=friends'>".$lang_friends."</a> <a style='color:#0000FF;cursor:pointer;margin-left:5px;' class='font_followers' href='?tab=all'>".$lang_all."</a></div>");
 						switch ($_GET['tab']) {
 							default;
 							case 'Highlights':
 
-								print("<div class='box_title'><strong>".$lang_highlights."</strong></div><hr NOSHADE width='100%' align='left' size='1'><br>");
+								print("<div class='box_title'><strong>".$lang_highlights."</strong></div><hr NOSHADE width='100%' align='left' size='1'>");
 								$highlights=$user_class->GetDescatadosActivity();
 								foreach ($highlights as $highlight_trans) {
-								print("<a class='font_followers' style='margin-left:10px'>".$highlight_trans['date']."</a><br>");	
+									
 								if($highlight_trans['anonymous']=='0'){
-									print("<a href='profile.php?id=".$highlight_trans['twitter_id']."'>@".$highlight_trans['screen_name']."</a> ".$lang_sent." ".$highlight_trans['amount']." ".$highlight_trans['currency']."  ".$lang_to." <a href='profile.php?id=".$highlight_trans['dest_twitter_id']."'>@".$highlight_trans['dest_screen_name']."</a><br>");
-									print("<img src='".$highlight_trans['profile_img']."' /> <img src='images/arrow-right.png' style='margin-left:40px; margin-bottom:15px;' /> <img style='margin-left:40px;' src='".$highlight_trans['dest_profile_img']."' /><br>");
-									print('<a href="https://twitter.com/intent/tweet?text=@'.$highlight_trans['screen_name'].' '.$lang_sent.' '.$highlight_trans['amount'].' '.$highlight_trans['currency'].' '.$lang_to.' @'.$highlight_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a><br><br>');
+									print('<div class="box_activity">');
+									print("<a class='font_followers' style=''>".$highlight_trans['date']."</a><br>");
+									print("<a class='font_actv' href='profile.php?id=".$highlight_trans['twitter_id']."'>@".$highlight_trans['screen_name']."</a> <a class='font_actv'> ".$lang_sent." ".$highlight_trans['amount']." ".$highlight_trans['currency']."  ".$lang_to." </a><a class='font_actv' href='profile.php?id=".$highlight_trans['dest_twitter_id']."'>@".$highlight_trans['dest_screen_name']."</a><br>");
+									print("<img src='".$highlight_trans['profile_img']."' /> <img src='images/arrow-right.png' style='margin-left:20px; margin-bottom:15px;width:25px;height:auto;' /> <img style='margin-left:20px;' src='".$highlight_trans['dest_profile_img']."' /><br>");
+									print("<br>");
+									print('<a href="https://twitter.com/intent/tweet?text=@'.$highlight_trans['screen_name'].' '.$lang_sent.' '.$highlight_trans['amount'].' '.$highlight_trans['currency'].' '.$lang_to.' @'.$highlight_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a>');
+									print('</div>');
 								}else{
 									//Trans is anonymous
-									print("<a>@anonymous</a> ".$lang_sent." ".$highlight_trans['amount']." ".$highlight_trans['currency']."  ".$lang_to." <a href='profile.php?id=".$highlight_trans['dest_twitter_id']."'>@".$highlight_trans['dest_screen_name']."</a><br>");
-									print("<img width='48' height='48' src='".anonymous_profile_img."' /> <img src='images/arrow-right.png' style='margin-left:40px; margin-bottom:15px;' /> <img style='margin-left:40px;' src='".$highlight_trans['dest_profile_img']."' /><br>");
-									print('<a href="https://twitter.com/intent/tweet?text=@anonymous '.$lang_sent.' '.$highlight_trans['amount'].' '.$highlight_trans['currency'].' '.$lang_to.' @'.$highlight_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a><br><br>');
-									
+									print('<div class="box_activity">');
+									print("<a class='font_followers' style=''>".$highlight_trans['date']."</a><br>");
+									print("<a class='font_actv'>@anonymous</a> <a class='font_actv'>".$lang_sent." ".$highlight_trans['amount']." ".$highlight_trans['currency']."  ".$lang_to."</a> <a class='font_actv' href='profile.php?id=".$highlight_trans['dest_twitter_id']."'>@".$highlight_trans['dest_screen_name']."</a><br>");
+									print("<img width='48' height='48' src='".anonymous_profile_img."' /> <img src='images/arrow-right.png' style='margin-left:20px; margin-bottom:15px;width:25px;height:auto;' /> <img style='margin-left:20px;' src='".$highlight_trans['dest_profile_img']."' /><br>");
+									print("<br>");
+									print('<a href="https://twitter.com/intent/tweet?text=@anonymous '.$lang_sent.' '.$highlight_trans['amount'].' '.$highlight_trans['currency'].' '.$lang_to.' @'.$highlight_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a>');
+									print('</div>');
 								}
 								
 									
@@ -610,18 +871,24 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 								print("<div class='box_title'><strong>".$lang_friends."</strong></div><hr NOSHADE width='100%' align='left' size='1'><br>");
 								$friends=$user_class->GetFriendsActivity($user_profile['id']);
 								foreach ($friends as $friend_trans) {
-									if($friend_trans['anonymous']=='0'){
-										print("<a class='font_followers' style='margin-left:10px'>".$friend_trans['date']."</a><br>");	
-										print("<a href='profile.php?id=".$friend_trans['twitter_id']."'>@".$friend_trans['screen_name']."</a> ".$lang_sent." ".$friend_trans['amount']." ".$friend_trans['currency']."  ".$lang_to." <a href='profile.php?id=".$friend_trans['dest_twitter_id']."'>@".$friend_trans['dest_screen_name']."</a><br>");
-										print("<img src='".$friend_trans['profile_img']."' /> <img src='images/arrow-right.png' style='margin-left:40px; margin-bottom:15px;' /> <img style='margin-left:40px;' src='".$friend_trans['dest_profile_img']."' /><br>");
-										print('<a href="https://twitter.com/intent/tweet?text=@'.$friend_trans['screen_name'].' '.$lang_sent.' '.$friend_trans['amount'].' '.$friend_trans['currency'].' '.$lang_to.' @'.$friend_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a><br><br>');
-									}else{
-										//Anonymous trans
-										print("<a class='font_followers' style='margin-left:10px'>".$friend_trans['date']."</a><br>");	
-										print("<a>@anonymous</a> ".$lang_sent." ".$friend_trans['amount']." ".$friend_trans['currency']."  ".$lang_to." <a href='profile.php?id=".$friend_trans['dest_twitter_id']."'>@".$friend_trans['dest_screen_name']."</a><br>");
-										print("<img width='48' height='48' src='".anonymous_profile_img."' /> <img src='images/arrow-right.png' style='margin-left:40px; margin-bottom:15px;' /> <img style='margin-left:40px;' src='".$friend_trans['dest_profile_img']."' /><br>");
-										print('<a href="https://twitter.com/intent/tweet?text=@anonymous '.$lang_sent.' '.$friend_trans['amount'].' '.$friend_trans['currency'].' '.$lang_to.' @'.$friend_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a><br><br>');
-									}
+								if($friend_trans['anonymous']=='0'){
+									print('<div class="box_activity">');
+									print("<a class='font_followers' style=''>".$friend_trans['date']."</a><br>");
+									print("<a class='font_actv' href='profile.php?id=".$friend_trans['twitter_id']."'>@".$friend_trans['screen_name']."</a> <a class='font_actv'> ".$lang_sent." ".$friend_trans['amount']." ".$friend_trans['currency']."  ".$lang_to." </a><a class='font_actv' href='profile.php?id=".$friend_trans['dest_twitter_id']."'>@".$friend_trans['dest_screen_name']."</a><br>");
+									print("<img src='".$friend_trans['profile_img']."' /> <img src='images/arrow-right.png' style='margin-left:20px; margin-bottom:15px;width:25px;height:auto;' /> <img style='margin-left:20px;' src='".$friend_trans['dest_profile_img']."' /><br>");
+									print("<br>");
+									print('<a href="https://twitter.com/intent/tweet?text=@'.$friend_trans['screen_name'].' '.$lang_sent.' '.$friend_trans['amount'].' '.$friend_trans['currency'].' '.$lang_to.' @'.$friend_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a>');
+									print('</div>');
+								}else{
+									//Trans is anonymous
+									print('<div class="box_activity">');
+									print("<a class='font_followers' style=''>".$friend_trans['date']."</a><br>");
+									print("<a class='font_actv'>@anonymous</a> <a class='font_actv'>".$lang_sent." ".$friend_trans['amount']." ".$friend_trans['currency']."  ".$lang_to."</a> <a class='font_actv' href='profile.php?id=".$friend_trans['dest_twitter_id']."'>@".$friend_trans['dest_screen_name']."</a><br>");
+									print("<img width='48' height='48' src='".anonymous_profile_img."' /> <img src='images/arrow-right.png' style='margin-left:20px; margin-bottom:15px;width:25px;height:auto;' /> <img style='margin-left:20px;' src='".$friend_trans['dest_profile_img']."' /><br>");
+									print("<br>");
+									print('<a href="https://twitter.com/intent/tweet?text=@anonymous '.$lang_sent.' '.$friend_trans['amount'].' '.$friend_trans['currency'].' '.$lang_to.' @'.$friend_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a>');
+									print('</div>');
+								}
 									}
 							break;
 							break;
@@ -631,17 +898,23 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 								$highlightsall=$user_class->GetAllActivity();
 								foreach ($highlightsall as $highlight_trans) {
 									if($highlight_trans['anonymous']=='0'){
-										print("<a class='font_followers' style='margin-left:10px'>".$highlight_trans['date']."</a><br>");	
-										print("<a href='profile.php?id=".$highlight_trans['twitter_id']."'>@".$highlight_trans['screen_name']."</a> ".$lang_sent." ".$highlight_trans['amount']." ".$highlight_trans['currency']."  ".$lang_to." <a href='profile.php?id=".$highlight_trans['dest_twitter_id']."'>@".$highlight_trans['dest_screen_name']."</a><br>");
-										print("<img src='".$highlight_trans['profile_img']."' /> <img src='images/arrow-right.png' style='margin-left:40px; margin-bottom:15px;' /> <img style='margin-left:40px;' src='".$highlight_trans['dest_profile_img']."' /><br>");
-										print('<a href="https://twitter.com/intent/tweet?text=@'.$highlight_trans['screen_name'].' '.$lang_sent.' '.$highlight_trans['amount'].' '.$highlight_trans['currency'].' '.$lang_to.' @'.$highlight_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a><br><br>');
-									}else{
-										//Anonymous trans
-										print("<a class='font_followers' style='margin-left:10px'>".$highlight_trans['date']."</a><br>");	
-										print("<a>@anonymous</a> ".$lang_sent." ".$highlight_trans['amount']." ".$highlight_trans['currency']."  ".$lang_to." <a href='profile.php?id=".$highlight_trans['dest_twitter_id']."'>@".$highlight_trans['dest_screen_name']."</a><br>");
-										print("<img width='48' height='48' src='".anonymous_profile_img."' /> <img src='images/arrow-right.png' style='margin-left:40px; margin-bottom:15px;' /> <img style='margin-left:40px;' src='".$highlight_trans['dest_profile_img']."' /><br>");
-										print('<a href="https://twitter.com/intent/tweet?text=@anonymous '.$lang_sent.' '.$highlight_trans['amount'].' '.$highlight_trans['currency'].' '.$lang_to.' @'.$highlight_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a><br><br>');
-									}
+									print('<div class="box_activity">');
+									print("<a class='font_followers' style=''>".$highlight_trans['date']."</a><br>");
+									print("<a class='font_actv' href='profile.php?id=".$highlight_trans['twitter_id']."'>@".$highlight_trans['screen_name']."</a> <a class='font_actv'> ".$lang_sent." ".$highlight_trans['amount']." ".$highlight_trans['currency']."  ".$lang_to." </a><a class='font_actv' href='profile.php?id=".$friend_trans['dest_twitter_id']."'>@".$highlight_trans['dest_screen_name']."</a><br>");
+									print("<img src='".$highlight_trans['profile_img']."' /> <img src='images/arrow-right.png' style='margin-left:20px; margin-bottom:15px;width:25px;height:auto;' /> <img style='margin-left:20px;' src='".$highlight_trans['dest_profile_img']."' /><br>");
+									print("<br>");
+									print('<a href="https://twitter.com/intent/tweet?text=@'.$highlight_trans['screen_name'].' '.$lang_sent.' '.$highlight_trans['amount'].' '.$highlight_trans['currency'].' '.$lang_to.' @'.$highlight_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a>');
+									print('</div>');
+								}else{
+									//Trans is anonymous
+									print('<div class="box_activity">');
+									print("<a class='font_followers' style=''>".$highlight_trans['date']."</a><br>");
+									print("<a class='font_actv'>@anonymous</a> <a class='font_actv'>".$lang_sent." ".$highlight_trans['amount']." ".$highlight_trans['currency']."  ".$lang_to."</a> <a class='font_actv' href='profile.php?id=".$highlight_trans['dest_twitter_id']."'>@".$highlight_trans['dest_screen_name']."</a><br>");
+									print("<img width='48' height='48' src='".anonymous_profile_img."' /> <img src='images/arrow-right.png' style='margin-left:20px; margin-bottom:15px;width:25px;height:auto;' /> <img style='margin-left:20px;' src='".$highlight_trans['dest_profile_img']."' /><br>");
+									print("<br>");
+									print('<a href="https://twitter.com/intent/tweet?text=@anonymous '.$lang_sent.' '.$highlight_trans['amount'].' '.$highlight_trans['currency'].' '.$lang_to.' @'.$highlight_trans['dest_screen_name'].'" class="twitter-hashtag-button" data-lang="'.$user_profile['languaje'].'" data-via="tuitflow">Tweet</a>');
+									print('</div>');
+								}
 									}
 							break;
 							
@@ -737,7 +1010,62 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 									}	
 								}
 							}
+							
+							//User profile campaigns
+				
+				//Check if user has campaigns
+				$move=$money_class->GetMyCampaigns($user_check[id]);
+				
+				if($move!=false){
+				print("<a><strong>".$lang_user_campaigns."</strong></a><br>");
+				?>
+				
+				
+				<div class="datagrid"><table>
+<thead><tr><th><?php print($lang_campaign_name_main); ?></th><th><?php print($lang_raised_funds_main); ?></th><th><?php print($lang_date); ?></th></tr></thead>
+<tbody>
+<?php
+				
+				//print_r($move);
+				if($move!=''){
+					$a=0;//for pair class style
+					
 
+					foreach ($move as $movement) {
+						if($a % 2==0){
+							//pair
+							$table_class="class='no_alt'";
+						}else{
+							$table_class="class='alt'";
+						}
+						if(strlen($movement['name'])>30){
+							$camp_name=substr($movement['name'], 0,30);
+						}else{
+							$camp_name=$movement['name'];
+						}
+						$raised_amount=$money_class->GetCampaignAmountReceived($movement['id']);
+						$total_amount=$raised_amount['sum(amount)'];
+						if($total_amount==NULL){
+							$total_amount=0;
+						}
+						$amount_funded=$total_amount.'/'.$movement['needed_money'];
+						
+						//Know if is paypal refill or user gift
+						//print("<tr ".$table_class."><td><a href='campaign.php?name=".$movement['friendly_url']."'>".$camp_name."</a></td><td>".$amount_funded." ".$user_class->GetUSerCurrency($user_profile['id'])."</td><td>".$movement['created_at']."</td></tr>");
+						print("<tr ".$table_class."><td><a href='campaign.php?id=".$movement['id']."'>".$camp_name."</a></td><td>".$amount_funded." ".$user_class->GetUSerCurrency($user_profile['id'])."</td><td>".$movement['created_at']."</td></tr>");
+						
+						
+					$a++;		
+					}
+					
+				}
+?>
+</tbody>
+</table>
+</div>
+<br><br>		<?php } //End campaigns ?>	
+							<?php
+							
 							print("<a><strong>".$lang_recent_tw."</strong></a><br>");
 							$last_tweets=$connection->get('statuses/user_timeline' , array("screen_name" => $user_data[screen_name],"count" => "5"));
 							if($_GET['debug']){
@@ -939,6 +1267,234 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 								print($lang_sent.": <strong>".$transaction['amount']." ".$currency."</strong> ".$thanks."<br><br>"	);
 								print($redeem_notes."<br>");
 					break;
+					
+					
+						case 'create_campaign':
+							print("<h3>".$lang_create_campaign."</h3>");
+							?>
+							
+<script src="jquery.validate.js"></script>
+							<form action="save_campaign.php" class="TTWForm" method="post" novalidate=""
+     enctype="multipart/form-data" name="createcampaign" id="createcampaign">
+           
+           
+          <div id="field1-container" >
+               <label for="field1">
+                   <?php print($lang_campaign_name); ?><br>
+               </label>
+               <input type="text" name="campaign_name" id="campaign_name" class="camapign_input" required="required" style="width:500px;">
+          </div>
+           
+           
+          <div id="field3-container">
+               <label for="field3">
+                    <?php print($lang_campaign_desc); ?><br>
+               </label>
+               <textarea rows="5" cols="20" name="campaign_desc" id="campaign_desc" required="required" class="camapign_input" style="width:500px;height:200px"></textarea>
+          </div>
+           
+           
+          <div id="field10-container">
+               <label for="field10">
+                    <?php print($lang_camp_need); ?> <?php print($_SESSION['user_profile']['currency']); ?>)<br>
+               </label>
+               <input type="number" name="campaign_money_needed" id="campaign_money_needed" required="required" style="width: 60px" class="camapign_input"> 
+          </div>
+           
+           
+          <div id="field11-container" style="display:inline;" >
+               <label for="field11">
+                    <?php print($lang_max_money); ?> (en <?php print($_SESSION['user_profile']['currency']); ?>)<br>
+               </label>
+               <input type="number" name="campaign_money_max" id="campaign_money_max" style="width: 60px" class="camapign_input">
+          </div>
+           
+           <br>
+          <div id="field5-container">
+               <label for="campaign_imagen">
+                    <?php print($lang_campaign_image);?><br>
+               </label>
+               <input type="file" name="campaign_imagen" id="campaign_imagen"> 
+          </div>
+          <br>
+           <div id="field12-container" >
+               <label for="campaign_utube_url">
+                    <?php print($lang_utube_video); ?><br>
+               </label>
+               <input type="url" name="campaign_utube_url" id="campaign_utube_url" class="camapign_input" style="width: 300px;"> 
+          </div>
+           
+          <div id="field6-container" class="field f_100 radio-group required">
+               <label for="field6-1">
+                    <?php print($lang_campaign_type);?>
+               </label>
+                
+                
+               <div class="option clearfix">
+                    <input type="radio" name="campaign_type" id="campaign_type" value="oneweek" required="required" >
+                    <span class="option-title">
+                         <?php print($lang_camp_typeone); ?>
+                    </span>
+               </div>
+                
+                
+               <div class="option clearfix">
+                    <input type="radio" name="campaign_type" id="campaign_type" value="twoweeks" required="required" >
+                    <span class="option-title">
+                         <?php print($lang_camp_typetwo); ?>
+                    </span>
+               </div>
+                
+                
+              
+          </div>
+           
+           <br>
+          <div id="form-submit" class="field f_100 clearfix submit">
+               <input type="submit" value="Guardar">
+          </div>
+     </form>
+<script>
+$("#createcampaign").validate();
+</script>
+							
+							
+							<?php
+						break;
+						
+						
+						
+						case 'campaign':
+						//Make campaign
+						$title=$campaign_data['name'];
+						$desc=$campaign_data['description'];
+						$img_url=$campaign_data['image_url'];
+						$video_url=$campaign_data['video_url'];
+						$max_money=$campaign_data['max_money'];
+						$needed_money=$campaign_data['needed_money'];
+						$created_at=$campaign_data['created_at'];
+						$campaign_enabled=$campaign_data['enabled'];
+						$campaign_type=$campaign_data['campaign_type'];
+						$campaign_currency=$campaign_data['currency'];
+						$campaing_rem=$money_class->IsCampaingActive($campaign_id, $created_at, $campaign_type);
+						if($campaing_rem!=false){
+							switch ($campaing_rem['scale']) {
+								case 'days':
+									$remaining_scale=$lang_days;
+								break;
+								case 'hours':
+									$remaining_scale=$lang_hours;
+								break;							
+								case 'minutes':
+									$remaining_scale=$lang_minutes;
+								break;							
+							}
+						}
+						
+						$amount_received=$money_class->GetCampaignAmountReceived($campaign_id);
+						$amount_received=$amount_received['sum(amount)'];
+						if($amount_received==NULL){
+							$amount_received='0';
+						}
+						$percent=round(($amount_received/$needed_money)*100,1);
+						?>
+						<h1><?php print($title); ?></h1>
+						
+						
+						<div style="float: right;">
+						<?php if($img_url!=''){ ?>
+							<div style='width: 350px;margin-left:30px; min-height: 250px;'>
+							<img src='<?php print($img_url); ?>' border=0 style='float:right;max-height: 250px; max-width: auto;margin-left: 10px' />
+							</div>
+						<?php } ?>
+							<div style="position: relative; top:10px; left:10px; padding-bottom: 10px; ">
+								<h2><?php print($percent); ?>% <?php print($lang_raised); ?></h2>
+							
+								<img src='<?php print(moneditas_icon); ?>' style='width:36px; height: auto;float: left; margin-right: 10px' /><p><?php print($amount_received); ?> <?php print($lang_of); ?> <?php print($needed_money); ?> <?php print($campaign_currency); ?><?php if($campaing_rem!=false){ ?>, <?php print($lang_remains); ?> <?php print($campaing_rem['value']);?> <?php print($remaining_scale); ?><?php } ?></p>
+								
+									<div class="meter orange" style="width: 370px;">
+										<span style="width: <?php print($percent);?>%"></span>
+									</div>
+							</div>
+							<?php
+						if($video_url!=''){
+							preg_match('/[\\?\\&]v=([^\\?\\&]+)/',$video_url,$matches);
+							 if($matches[1]!=''){
+								$video['id']=$matches[1];
+								if($video['id']!=''){
+									print("<div style='float:right; margin-right:10px;'>");
+									print('<h3>Video</h3>');
+									print('<iframe width="370" height="265" src="https://www.youtube.com/embed/'.$video['id'].'" frameborder="0" allowfullscreen></iframe><br>');
+									print("</div>");
+								}
+							}
+							
+						}
+						
+						
+						?>
+						</div>
+						<div style=" min-height: 500px;">
+						<p><?php print($desc); ?></p>	
+						</div>
+						<div >
+						<h3><?php print($lang_difuse); ?></h3>
+						<?php
+						$urltodifuse=urlencode('http://tuitflow.com/campaign.php?id='.$campaign_id);
+						?>
+						<div style="display:inline;"><a href='https://twitter.com/intent/tweet?text=<?php print($lang_helpme); ?> "<?php print($title); ?>" <?php print($urltodifuse); ?> ' class='twitter-hashtag-button' data-lang='<?php print($user_profile['languaje']); ?>' data-via='tuitflow'>Tweet</a></div>
+						<?php
+						$campaign_owner=$money_class->GetCampaignOwner($campaign_id);
+						if($campaing_rem!=false && $_SESSION['user_profile']['id']!=$campaign_owner['user_id']){
+							//Campaign is active, we can donate it
+							?>
+							<h3><?php print($lang_donate_to); ?></h3>
+							<form method="POST" action="save_transaction_campaign.php?id=<?php print($campaign_id); ?>" >
+							<?php if($_SESSION['user_profile']['id']!=''){ ?>
+							<a><?php print($lang_your_account);?> <strong><?php print($user_class->GetBalance($_SESSION['user_profile']['id'])); ?></strong> <?php print($user_class->GetCurrencyLogo($_SESSION['user_profile']['currency'])); ?></a><br><br>
+							<?php } ?>
+							<label for="amount"><?php print($lang_amount_upper); ?></label> 
+								  <input type="text" id="amount" name="amount" style="border: 0; width: 30px; font-weight: bold" /><?php print($user_class->GetCurrencyLogo($_SESSION['user_profile']['currency'])); ?>
+								  <br>
+								 <br>
+								<div id="slider-range-max" class="slider-range-max"></div>
+								 <br>
+								<input type="submit" value="<?php print($lang_send_money); ?>" />
+							
+								</form>
+							<?php
+						}
+						if($campaing_rem==false){
+							print("<div style='height:150px;margin-top:20px;'>".$lang_campaign_off."</div>");	
+						}
+						
+						if($_SESSION['user_profile']['id']==$campaign_owner['user_id']){
+							switch ($campaign_type) {
+								case 'oneweek':
+									$tf_fare=0.01;
+								break;
+								case 'twoweeks':
+									$tf_fare=0.05;
+								break;
+							}
+							
+							$commision=$amount_received*$tf_fare;
+							$total=$amount_received-$commision;
+							?>
+							<h3><?php print($lang_your_campaign);?></h3>
+							<p><?php print($lang_raised_funds); ?> <?php print($amount_received); ?> de <?php print($needed_money); ?> <?php print($campaign_currency); ?></p>
+							<p><?php print($lang_tuitflow_fare); ?> <?php print($commision); ?> <?php print($campaign_currency); ?></p>
+							<p><?php print($lang_total_cam); ?> <?php print($total); ?> <?php print($campaign_currency); ?></p>
+							<a href=""><?php print($lang_edit_campaign); ?></a> <a href=""><?php print($lang_end_campaign); ?></a>
+							<?php
+							
+						}
+						?>
+						</div>
+						<?php
+						
+							
+						break;
 				}
             	
             	
@@ -962,6 +1518,7 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
             		case 'paypal_refund';
 					case 'sum_balance';
 					case 'finder';
+					case 'create_campaign';
 					case 'index':
 						$showed_name="".$user_prof[name]." @".$user_prof[screen_name]."";
 						if(strlen($showed_name)>30){
@@ -978,9 +1535,10 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 					break;
 					case 'save_transaction';
 					case 'send_money';
+					case 'campaign';
 					case 'profile':
 						
-						print("<strong>".$user_data[name]." @".$user_data[screen_name]."</strong> <div style='display:inline;'>".$money_class->GenerateSendMoneyButton($_SESSION['user_profile']['id'], $user_data['id'])."</div><br>");
+						print("<strong>".$user_data[name]." @".$user_data[screen_name]."</strong><br>"); //<div style='display:inline;'>".$money_class->GenerateSendMoneyButton($_SESSION['user_profile']['id'], $user_data['id'])."</div><br>");
 						print("<img src='".$user_data[profile_image_url_https]."' /><br>");
 						print(ucwords($lang_followers).": ".$user_data[followers_count]."<br>");
 						print(ucwords($lang_following).": ".$user_data[friends_count]."<br>");
