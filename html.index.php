@@ -5,7 +5,7 @@ include('rosetta.php');
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>tuitflow</title>
-<link href='https://fonts.googleapis.com/css?family=Pontano+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 <style type='text/css'>
 .wrapper{
    width: 100%;
@@ -13,9 +13,9 @@ include('rosetta.php');
 }
 .header{
    float: left;
-   width: 99%;
+   width: 100%;
    background-color: #660066;
-   padding-left:10px;
+  
    padding-top:10px;
    padding-bottom:10px;
    
@@ -48,9 +48,11 @@ include('rosetta.php');
 body {
    padding: 0px;
    margin: 0px;
-   background-color: #F0E6F0;
-   font-family: 'Pontano Sans','sans-serif';
-   
+  /* background-color: #e0e0e0; */
+     font-family: 'Source Sans Pro';
+
+        }
+
 }
 
 a:link{
@@ -90,6 +92,13 @@ a:visited{
 	margin-bottom:10px;
 	line-height: 22px;
    	overflow: hidden;
+   	   	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgba(102,0,102, 0.1);
+	
 }
 .right_container{
 	
@@ -98,9 +107,25 @@ a:visited{
 	padding-top:10px;
 	padding-bottom:10px;
 	padding-right:10px;
-	background-color:#fff;
+	background-color:#fff; 
 	line-height: 22px;
-   	
+
+  	      	   	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border-style:solid;
+	border-width:1px;
+	border-color:rgba(102,0,102, 0.1);
+	
+	/* 
+	   	background: -moz-linear-gradient(top, rgba(247,242,247,1) 0%, rgba(247,242,247,0.36) 64%, rgba(102,0,102,0) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(247,242,247,1)), color-stop(64%,rgba(247,242,247,0.36)), color-stop(100%,rgba(102,0,102,0)));
+background: -webkit-linear-gradient(top, rgba(247,242,247,1) 0%,rgba(247,242,247,0.36) 64%,rgba(102,0,102,0) 100%); 
+background: -o-linear-gradient(top, rgba(247,242,247,1) 0%,rgba(247,242,247,0.36) 64%,rgba(102,0,102,0) 100%); 
+background: -ms-linear-gradient(top, rgba(247,242,247,1) 0%,rgba(247,242,247,0.36) 64%,rgba(102,0,102,0) 100%); 
+background: linear-gradient(to bottom, rgba(247,242,247,1) 0%,rgba(247,242,247,0.36) 64%,rgba(102,0,102,0) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f2f7', endColorstr='#00660066',GradientType=0 ); 
+*/
 }
 .footer{
    float: left;
@@ -300,13 +325,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660066', end
 	background-color:#F0E6F0; color:#292929; 
 	*/
 	background: #ffffff; /* Old browsers */
-background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* IE10+ */
-background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	
+background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); 
+background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); 
+background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); 
+background: -ms-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); 
+background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); 
+	
 	border-left:1px solid #F0E6F0;
 	padding-top:7px;
 	padding-bottom:7px;
@@ -337,9 +364,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
     cursor: pointer;
     
     background: #FBFBFB; /* old browsers */
-    background: -moz-linear-gradient(top, #FBFBFB 0%, #EEEEEE 99%); /* firefox */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FBFBFB), color-stop(99%, #EEEEEE)); /* webkit */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#FBFBFB', endColorstr = '#EEEEEE', GradientType = 0); /* ie */
+   
     border: 1px solid #cfcfcf;
     
     color: #666;
@@ -418,7 +443,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
         background-image: -ms-linear-gradient(top, #f1a165, #f36d0a);
         background-image: -o-linear-gradient(top, #f1a165, #f36d0a);
 }
-					
+	.text_big{
+	  text-shadow: 0px 0px 1px #660066;
+        filter: dropshadow(color=#660066, offx=0, offy=0);
+        
+}				
 </style>
 
  <link rel="stylesheet" href="jquery/jquery-ui.css" />
@@ -514,8 +543,8 @@ function SendMoneyPre(){
 
     // tooltip content and styling
     var $content = $(
-        '<div style="float:right;height:10px;"><a style="line-height:10px;" class="font_followers" href="#" >x</a></div><a style="font-family: Pontano Sans;"><strong>' + params.title + '</strong></a>' +
-        '<br><a style="margin: 0; padding: 5px 0 5px 0;font-family: Pontano Sans; font-size: 12px;">' + params.text + '</a>');
+        '<div style="float:right;height:10px;"><a style="line-height:10px;" class="font_followers" href="#" >x</a></div><a style="font-family: Source Sans Pro;"><strong>' + params.title + '</strong></a>' +
+        '<br><a style="margin: 0; padding: 5px 0 5px 0;font-family: Source Sans Pro; font-size: 12px;">' + params.text + '</a>');
 
     // add 'Close' button functionality        
     var $close = $($content[0]);
@@ -545,7 +574,7 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 <body onload="javascript:vibrate();">
 <div class="wrapper">
     <div class="header">
-        <a class="font_header" href="index.php" style="color:#fff"><img style="width: 150px; height: auto;" src="images/logo_fondo.png" border="0" /></a>
+        <a class="font_header" href="index.php" style="color:#fff"><img style="margin-left:10px; width: 150px; height: auto;" src="images/logo_fondo.png" border="0" /></a>
         <img onclick="document.location.href='index.php#settings';" style="cursor:pointer;height: 25px; width: auto; padding-top: 10px; float: right; margin-right: 10px;" src='<?php print $user_prof[profile_image_url_https]; ?>' />
         <form method="GET" action="finder.php" class="search_form">
         
@@ -602,7 +631,7 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 	        <div class="left_index">
 	        	<?php
 	        	
-	            print("<div class='box_title' style='display:inline'><a style='font-size:18px;'><strong>".$lang_ultimas."</strong></a></div>");
+	            print("<div class='box_title' style='display:inline'><a style='font-size:18px;'><strong><span class='text_big'>".$lang_ultimas."</span></strong></a></div>");
 	            print('<div style="display:inline-block;" id="root" style="width: 100%; height: 100%"></div>');
 	            print("<div style='display:inline-block; margin-bottom:20px; margin-left:20px;'><a style='cursor:pointer; ' onmouseover='javascript:SendMoneyPre();' class='font_followers'><img id='send_money_button_pre' border='0' src='".coin_icon."' /> </a><a onmouseover='javascript:SendMoneyPre();' style='color:#0000FF;cursor:pointer' class='font_followers'> ".$lang_send_money."</a></div> <div style='display:inline-block; margin-bottom:20px; margin-left:20px;'> ".$money_class->GenerateCreateCampaignButton($_SESSION['user_profile']['id'])."<a style='color:#0000FF;cursor:pointer' class='font_followers' href='create_campaign.php?user_id=".$_SESSION['user_profile']['id']."'>".$lang_campaign_create."</a></div><br>");
 				
@@ -635,7 +664,7 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 					print('<div style="height:10px;"> </div>');				
 				?>
 	            <?php
-	            print("<div class='box_title' style='display:inline'><a style='font-size:18px;'><strong>".$user_prof[name]."'s tuitflow</strong></a></div>");
+	            print("<div class='box_title' style='display:inline'><a style='font-size:18px;'><strong><span class='text_big'>".$user_prof[name]."'s tuitflow</span></strong></a></div>");
 								
 				
 				
@@ -839,7 +868,7 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 							default;
 							case 'Highlights':
 
-								print("<div class='box_title'><strong>".$lang_highlights."</strong></div><hr NOSHADE width='100%' align='left' size='1'>");
+								print("<div class='box_title'><strong><span class='text_big'>".$lang_highlights."</span></strong></div><hr NOSHADE width='100%' align='left' size='1'>");
 								$highlights=$user_class->GetDescatadosActivity();
 								foreach ($highlights as $highlight_trans) {
 									
@@ -868,7 +897,7 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 							break;
 								
 							case 'friends':
-								print("<div class='box_title'><strong>".$lang_friends."</strong></div><hr NOSHADE width='100%' align='left' size='1'><br>");
+								print("<div class='box_title'><strong><span class='text_big'>".$lang_friends."</span></strong></div><hr NOSHADE width='100%' align='left' size='1'><br>");
 								$friends=$user_class->GetFriendsActivity($user_profile['id']);
 								foreach ($friends as $friend_trans) {
 								if($friend_trans['anonymous']=='0'){
@@ -894,7 +923,7 @@ $('#root').growl({ title: '<?php print($lang_to_user); ?>', text: '<form method=
 							break;
 							
 							case 'all':
-								print("<div class='box_title'><strong>".$lang_all_act."</strong></div><hr NOSHADE width='80%' align='left' size='1'><br>");
+								print("<div class='box_title'><strong><span class='text_big'>".$lang_all_act."</span></strong></div><hr NOSHADE width='80%' align='left' size='1'><br>");
 								$highlightsall=$user_class->GetAllActivity();
 								foreach ($highlightsall as $highlight_trans) {
 									if($highlight_trans['anonymous']=='0'){

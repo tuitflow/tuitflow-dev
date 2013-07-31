@@ -286,6 +286,25 @@ class Users{
 		return true;
 		
 	}
+		//With great power, comes great responsibility. USE CAREFULLY
+		function GetAllUsersScreenName(){
+		$ver_users=mysql_query("SELECT screen_name FROM users WHERE active = '1' ORDER BY id ASC;");
+		$i=0;
+		while($uss=mysql_fetch_array($ver_users)){
+			$userr[$i]=$uss;
+			$i++;
+		}
+		return $userr;
+		}
+		
+		function InsertUserRelationshipValue($screen_name,$remote_screen_name,$value){
+			//Get current value
+			$cur=mysql_query("SELECT current_value FROM good_relationships WHERE user_screen_name = '".$screen_name."' AND remote_twitter_screen_name = '".$remote_screen_name."';");
+			$get_v=$cur['current_value'];
+			$value=$get_v+$value;
+			$insert_value=mysql_query("INSERT INTO  `good_relationships` (`id` ,`user_screen_name` ,`remote_twitter_screen_name` ,`timestamp` ,`current_value`)VALUES (NULL ,  '".$screen_name."',  '".$remote_screen_name."',CURRENT_TIMESTAMP ,  '".$value."');");
+			return true;
+		}
 }
 class MoneyStuff{
 		

@@ -15,6 +15,15 @@ $access_token = $_SESSION['access_token'];
 $connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET, $access_token['oauth_token'], $access_token['oauth_token_secret']);
 
 if($user_post!=''){
+	
+	
+	
+		//Fixs bug: FS#22 - Bug al buscar usuario en send money https://www.tuitflow.com/admin/bug/index.php?do=details&task_id=22
+		$findme   = '@';
+		$hasarroba = strpos($user_post, $findme);
+		if($hasarroba!== false){
+			$user_post=substr($user_post, 1);
+		}
 		//Twitter Query
 		
 		
